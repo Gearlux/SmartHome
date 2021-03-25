@@ -1,6 +1,9 @@
 # Linking Ikea Trådfri bulbs to Philips Hue Bridge
 
-So recently I bought this ![](images/cow.jpg "white hanglamp cow").
+So recently I bought this wonderful lamp
+
+![](images/cow.jpg "white hanglamp cow").
+
 I wanted to buy the small version, because it replaces an old lamp in the hallway.
 The small version was end of series and could not be delivered, so the [shop](https://shop.d-lightz.com/) offered the bigger version at the same price.
 

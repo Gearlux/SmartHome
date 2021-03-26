@@ -17,6 +17,12 @@ When the lamp arrived, I noticed that it required four E27 bulbs. This was too m
 Because the manufacturer of the lamp only allows 6W bulbs, we need to limit the brightness of the lamp in order to keep the temperature in the lamp low enough. According to [this test](https://www.youtube.com/watch?v=mg4-O-3Vsn0&ab_channel=AutomateYourLife), the Hue lights are dimming according to a [logarithmic curve](https://www.cnet.com/home/energy-and-utilities/your-smart-bulbs-arent-dimming-the-way-you-think-they-are-heres-why/). 
 I compared a Philips Hue bulb with a similar Trådfri bulb and verified that Trådfri bulbs connected to a Philips Hue bridge follow the same logarithmic curve.
 
+| Brightness | Power consumption |
+|:----------:|:-----------------:|
+| 100 % | 9.5W |
+| 75 % | 5 W |
+| 50% | 2 W |
+
 So limiting the brightness to 75% should keep the power consumption of the Trådfri bulb below the allowed level of 6W.
 
 After some time, I managed to achieve this for my Trådfri bulb in the office with the following [homeassistant](https://www.home-assistant.io/) automation:

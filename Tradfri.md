@@ -24,7 +24,7 @@ I compared a Philips Hue bulb with a similar Trådfri bulb and verified that Tr�
 |:----------:|:-----------------:|
 | 100 % | 9.5W |
 | 75 % | 5 W |
-| 50% | 2 W |
+| 50 % | 2 W |
 
 So limiting the brightness to 75% should keep the power consumption of the Trådfri bulb below the allowed level of 6W.
 
@@ -52,3 +52,15 @@ After some time, I managed to achieve this for my Trådfri bulb in the office wi
 ```
 
 Next step is to write a blueprint for all my bulbs in the hallway.
+
+# First blueprint for max brightness
+
+At first, I wanted to configure the maximum brightness in percentage. According to [this discussion](https://community.home-assistant.io/t/support-variables-in-a-template-trigger/249084), using variables within template triggers is not available. I guess this also the case for template conditions.
+
+The following [blueprint](blueprints/max_brightness.yaml) allows limiting the max brightness of one bulb.
+
+Next steps:
+- [ ] Blueprint where only the entity needs to be selected
+- [ ] Blueprint for multiple entities
+- [ ] Configure maximum brightness in %
+ 

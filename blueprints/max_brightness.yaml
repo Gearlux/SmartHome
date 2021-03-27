@@ -1,0 +1,47 @@
+blueprint:
+  name: Maximum Brightness
+  description: Limit the maximum brightness of a light
+  domain: automation
+  input:
+    light_entity: 
+      name: Light
+      description: The light entity that has to be dimmed
+      selector:
+        entity:
+          domain: light
+    brightness: 
+      name: Brightness
+      description: Maximum brightness of the bulb
+      default: 190 # 75 %
+      selector:
+        number: 
+          min: 0
+          max: 255
+          mode: slider
+          step: 5
+    light_device:
+      name: Light Device
+      description: The light device of the light entity
+      selector:
+        device:
+          entity:
+            domain: light
+
+mode: queued
+max: 10
+
+trigger:
+- platform: state
+  entity_id: !input light_entity
+
+condition:
+- condition: numeric_state
+  entity_id: !input light_entity
+  attribute: brightness
+  above: !input brightness
+
+action:
+- type: brightness_decrease
+  device_id: !input light_device
+  entity_id: !input light_entity
+  domain: light
